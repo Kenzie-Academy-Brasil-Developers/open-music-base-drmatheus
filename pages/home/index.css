@@ -1,1 +1,148 @@
-/* Desenvolva sua estilização aqui ... */
+/* header */
+.header{
+    margin-top: 12px;
+    padding: 65px 0px;
+    align-items: center; 
+  }
+  
+  /*-------positions&gaps-----*/
+  
+  .flex{
+    display: flex;
+  }
+  
+  .column{
+    flex-direction: column;
+  }
+  
+  .wrap{
+    flex-wrap: wrap;
+  }
+  
+  .spaceBetween{
+    justify-content: space-between;
+  }
+  
+  .rowGap{
+    row-gap: 30px;
+  }
+  
+  .rowGap1{
+    row-gap: 22px;
+  }
+  
+  .columnGap{
+    column-gap: 30px;
+  }
+  
+  .columnGap1{
+    column-gap: 22px;
+  }
+  
+  
+  /*-----buttons------*/
+  
+  .buttonTheme{
+    border: none;
+    border-radius: var(--radius-1);
+    width: 36px;
+    height: 36px;
+    background-color: var(--color-grey-8);
+    background-image: url(../../assets/img/moon.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+  }
+  
+  .button{
+    padding: 8px 8px;
+    height: 32px;
+    border-radius: var(--radius-1);
+    background-color: var(--color-grey-8);
+    color: var(--color-grey-2);
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  label:has(input:checked){
+    background-color: var(--color-grey-1);
+    color: var(--color-grey-8);
+  }
+  
+  .buttonBuy{
+  padding-top: 5px;
+  background-color: var(--color-grey-7);
+  }
+  
+  .hideMe{
+    display: none;
+  }
+  
+  
+  /*-------text--------*/
+  
+  .title1{
+    color: var(--color-grey-1);
+    font-size: 28px;
+    font-weight: 600;
+  }
+  
+  .title2{
+    color: var(--color-grey-1);
+    font-size: 16px;
+    font-weight: 600;
+  }
+  
+  .title3{
+    color: var(--color-grey-1);
+    font-size: 14px;
+    font-weight: 600;
+  }
+  
+  .text1{
+  font-size: 12px;
+  color: var(--color-grey-2);
+  font-weight: 500;
+  }  
+  
+  /*-------cardProduct--------*/
+  
+  .imgItem{
+    width: 308px;  
+  }
+  
+  .imgFrame{
+    overflow: hidden;
+    border-radius: var(--radius-1) var(--radius-1) 0 0;
+    width: 308px;
+  }
+  
+  .productInf{
+    height: 146px;
+    background-color: var(--color-grey-8);
+    border-radius: 0 0 var(--radius-1) var(--radius-1) ;
+    padding: 16px;
+  }
+  
+  /*------inputs----*/
+
+  .maxPrice{
+    -webkit-appearance: none;
+    height: 0.5rem;
+    background: var(--color-grey-5);
+    outline: none;
+    border-radius: var(--radius-1);
+    transition-delay: 0.5s;
+  }
+  
+  .maxPrice::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 24px;
+    height: 24px;
+    border: solid 6px var(--color-brand-1);
+    border-radius: 50%;
+    background: var(--color-grey-8);
+    cursor: pointer;
+  }

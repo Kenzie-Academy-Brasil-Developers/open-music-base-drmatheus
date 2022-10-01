@@ -28,7 +28,7 @@
   --font-3: 0.875rem;
 
   --radius-1: 0.25rem;
-  --container: 45rem;
+  --container: 40rem;
 }
 
 body {
@@ -36,11 +36,15 @@ body {
   font-style: normal;
   -webkit-font-smoothing: antialiased;
   background-color: var(--color-grey-9);
+  
+}
+
+ul{
+  list-style: none;
 }
 
 .container {
   width: var(--container);
   max-width: 100%;
-  padding: 0 1rem;
   margin: 0 auto;
 }

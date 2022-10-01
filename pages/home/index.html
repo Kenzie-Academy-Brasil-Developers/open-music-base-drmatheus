@@ -9,7 +9,102 @@
     <title>Open Music</title>
   </head>
   <body>
-    <main></main>
+    <header class="container header flex spaceBetween">
+      <h1 class="title1">open music</h1>
+      <button class="buttonTheme"></button>
+    </header>
+    <main class="container flex column rowGap">
+      <nav class="container flex column rowGap">
+      <h2 class="title2">Gênero Musical</h2>      
+      <ul id="filter"class="flex wrap rowGap columnGap">
+        <li class="flex"><label class="button" for="Todos">Todos<input class="hideMe" type="radio" name="filter" id="Todos" ></label></li>
+        <li class="flex"><label class="button" for="Pop">Pop<input class="hideMe" type="radio" name="filter" id="Pop"></label></li>
+        <li class="flex"><label class="button" for="MPB">MPB<input class="hideMe" type="radio" name="filter" id="MPB"></label></li>
+        <li class="flex"><label class="button" for="Forró">Forró<input class="hideMe" type="radio" name="filter" id="Forró"></label></li>
+        <li class="flex"><label class="button" for="Samba">Samba<input class="hideMe" type="radio" name="filter" id="Samba"></label></li>
+        <li class="flex"><label class="button" for="Baião">Baião<input class="hideMe" type="radio" name="filter" id="Baião"></label></li>
+        <li class="flex"><label class="button" for="Rap">Rap<input class="hideMe" type="radio" name="filter" id="Rap"></label></li>
+        <li class="flex"><label class="button" for="Hip-Hop">Hip-Hop<input class="hideMe" type="radio" name="filter" id="Hip-Hop"></label></li>
+        <li class="flex"><label class="button" for="Rock">Rock<input class="hideMe" type="radio" name="filter" id="Rock"></label></li>
+        <li class="flex"><label class="button" for="Reggae">Reggae<input class="hideMe" type="radio" name="filter" id="Reggae"></label></li>
+        <li class="flex"><label class="button" for="Country">Country<input class="hideMe" type="radio" name="filter" id="Country"></label></li>
+        <li class="flex"><label class="button" for="Gospel">Gospel<input class="hideMe" type="radio" name="filter" id="Gospel"></label></li>
+      </ul>
+    </nav>
+    <section class="container flex column rowGap">
+      <div class="flex spaceBetween"><h2 class="title2">Definir preço</h2>
+      <span class="maxPriceShow">Até R$ 70.00</span></div>
+      <input class="maxPrice" type="range" min="30" max="500" value="70">
+    </section>
+  <section class="container">
+    <ul id="productList" class="flex wrap spaceBetween rowGap">      
+      <!--<li>
+        <div class="imgFrame"><img class="imgItem" src="../../assets/img/3.jpg" alt=""></div>
+        <div class="productInf flex column rowGap1">
+        <div class="flex columnGap1">
+          <span class="text1">Nirvana</span>
+          <span class="text1">1990</span>
+        </div>        
+        <h2 class="title2">Nirvana Discografia</h2>
+        <div class="flex spaceBetween">
+          <h3 class="title3">R$ 240.00</h3>
+          <button class="button buttonBuy">Comprar</button>
+        </div>        
+      </div>        
+      </li>
+      <li>
+        <div class="imgFrame"><img class="imgItem" src="../../assets/img/3.jpg" alt=""></div>
+        <div class="productInf flex column rowGap1">
+        <div class="flex columnGap1">
+          <span class="text1">Nirvana</span>
+          <span class="text1">1990</span>
+        </div>        
+        <h2 class="title2">Nirvana Discografia</h2>
+        <div class="flex spaceBetween">
+          <h3 class="title3">R$ 240.00</h3>
+          <button class="button buttonBuy">Comprar</button>
+        </div>        
+      </div>        
+      </li>
+      <li>
+        <div class="imgFrame"><img class="imgItem" src="../../assets/img/3.jpg" alt=""></div>
+        <div class="productInf flex column rowGap1">
+        <div class="flex columnGap1">
+          <span class="text1">Nirvana</span>
+          <span class="text1">1990</span>
+        </div>        
+        <h2 class="title2">Nirvana Discografia</h2>
+        <div class="flex spaceBetween">
+          <h3 class="title3">R$ 240.00</h3>
+          <button class="button buttonBuy">Comprar</button>
+        </div>        
+      </div>        
+      </li>
+      <li>
+        <div class="imgFrame"><img class="imgItem" src="../../assets/img/3.jpg" alt=""></div>
+        <div class="productInf flex column rowGap1">
+        <div class="flex columnGap1">
+          <span class="text1">Nirvana</span>
+          <span class="text1">1990</span>
+        </div>        
+        <h2 class="title2">Nirvana Discografia</h2>
+        <div class="flex spaceBetween">
+          <h3 class="title3">R$ 240.00</h3>
+          <button class="button buttonBuy">Comprar</button>
+        </div>        
+      </div>        
+      </li>-->
+      
+      
+    </ul>
+  </section>
+
+  
+    
+      
+
+
+    </main>
     <script src="../../scripts/theme.js"></script>
     <script src="productsData.js"></script>
     <script src="index.js"></script>
