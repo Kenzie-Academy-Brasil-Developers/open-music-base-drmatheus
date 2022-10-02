@@ -4,28 +4,17 @@ const productList = document.querySelector("#productList")
 const buttonsFilters = document.querySelectorAll("#filter input")
 const Filters = [...buttonsFilters]
 const maxPrice = document.querySelector(".maxPrice")
+      maxPrice.max = biggerPrice(products)
 const maxPriceShow = document.querySelector(".maxPriceShow")
 
-
-console.dir(Filters)
-
-maxPrice.addEventListener("click", () => {
+maxPrice.addEventListener("mousemove", () => {
     maxPriceShow.innerHTML = `Até R$ ${(maxPrice.value * 1).toFixed(2)}`
-    productList.innerHTML = ""
-    products.forEach((product) => {
-        if (filterProductsByPrice(product)) {
-            showProduct(product)
-        }
-    })
+    products.forEach(filterProductsByPriceAndCategory)    
 })
 
-Filters.forEach((button) => button.addEventListener("click", () => {
-    /*filterProductsByCategory(button)*/
-    /*filterProductsByPriceAndCategory(product)*/
+buttonsFilters.forEach((button) => button.addEventListener("click", () => {    
     products.forEach(filterProductsByPriceAndCategory)
 }))
-
-/*products.forEach(filterProductsByPriceAndCategory)*/
 
 function showProduct(product) {
     productList.insertAdjacentHTML('afterbegin', `
@@ -37,36 +26,13 @@ function showProduct(product) {
               <span class="text1">${product.year}</span>
             </div>        
             <h2 class="title2">${product.title}</h2>
-            <div class="flex spaceBetween">
-              <h3 class="title3">R$ ${product.price}</h3>
+            <div class="flex spaceBetween alignCenter">
+              <h3 class="title3">R$ ${(product.price).toFixed(2)}</h3>
               <button class="button id="${product.id}" buttonBuy">Comprar</button>
             </div>        
           </div>        
     </li>
     `)
-}
-
-function filterProductsByCategory(button) {
-    productList.innerHTML = ""
-    if (button.id == categories[0]) {
-        products.forEach((product) => {
-            if (filterProductsByPrice(product)) {
-                showProduct(product)
-            }
-        })
-    }
-    categories.forEach((categorie, index) => {
-        if (button.id == categorie) {
-            products.forEach((product) => {
-                if (index == product.category) {
-                    if (filterProductsByPrice(product)) {
-                        showProduct(product)
-                    }
-                }
-            })
-
-        }
-    })
 }
 
 function filterProductsByPrice(product) {
@@ -78,14 +44,15 @@ function filterProductsByPrice(product) {
 
 function filterProductsByPriceAndCategory(product) {
 
+    productList.innerHTML = ""
+
     ButtonSelected = Filters.find((button)=>button.checked == true)
 
-    console.dir(ButtonSelected)
-
     if (ButtonSelected.id == categories[0]) {
+        products.forEach((product)=>{
         if (filterProductsByPrice(product)) {
             showProduct(product)
-        }
+        }})
     } else {
 
         categories.forEach((categorie, index) => {
@@ -101,3 +68,15 @@ function filterProductsByPriceAndCategory(product) {
         })
     }
 }
+
+function biggerPrice(array){
+    let theGreater = 0
+    array.forEach((product)=>{        
+        if(product.price > theGreater){
+            theGreater = product.price
+        }
+    })
+    return theGreater
+}
+
+products.forEach(filterProductsByPriceAndCategory)

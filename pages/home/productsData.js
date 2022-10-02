@@ -19,7 +19,7 @@
   },
   {
     title: "Nirvana Discografia",
-    category: 3,
+    category: 8,
     price: 50.0,
     img: "../../assets/img/3.jpg",
     band: "Nirvava",
@@ -28,7 +28,7 @@
   },
   {
     title: "Both Sides",
-    category: 4,
+    category: 1,
     price: 22.0,
     img: "../../assets/img/4.jpg",
     band: "Phil Collins",

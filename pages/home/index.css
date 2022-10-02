@@ -10,6 +10,10 @@
   .flex{
     display: flex;
   }
+
+  .alignCenter{
+    align-items: center;
+  }
   
   .column{
     flex-direction: column;
@@ -58,7 +62,7 @@
     padding: 8px 8px;
     height: 32px;
     border-radius: var(--radius-1);
-    background-color: var(--color-grey-8);
+    background-color: var(--color-grey-7);
     color: var(--color-grey-2);
     font-size: 14px;
     border: none;
@@ -66,6 +70,7 @@
   }
   
   label:has(input:checked){
+    padding: 8px 8px;
     background-color: var(--color-grey-1);
     color: var(--color-grey-8);
   }
@@ -109,13 +114,24 @@
   /*-------cardProduct--------*/
   
   .imgItem{
-    width: 308px;  
+    width: 308px; 
+    filter: brightness(1.5); 
+  }
+
+  .imgItem:hover{
+    width: 400px;
+    transition-duration: 0.7s;
+    filter: brightness(2.5);
   }
   
   .imgFrame{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     overflow: hidden;
     border-radius: var(--radius-1) var(--radius-1) 0 0;
     width: 308px;
+    height: 113px;
   }
   
   .productInf{
@@ -133,7 +149,6 @@
     background: var(--color-grey-5);
     outline: none;
     border-radius: var(--radius-1);
-    transition-delay: 0.5s;
   }
   
   .maxPrice::-webkit-slider-thumb {
@@ -143,6 +158,28 @@
     height: 24px;
     border: solid 6px var(--color-brand-1);
     border-radius: 50%;
-    background: var(--color-grey-8);
+    background: #eee;
     cursor: pointer;
   }
+
+  /*-----darkmode----*/  
+
+  .darkmode{
+    --color-grey-9: #15171a;
+    --color-grey-8: #212529;
+    --color-grey-7: #2b2f33;
+    --color-grey-6: #868e96;
+    --color-grey-5: #adb5bd;
+    --color-grey-4: #ced4da;
+    --color-grey-3: #dee2e6;
+    --color-grey-2: #f1f3f5;
+    --color-grey-1: #f8f9fa;
+    --color-grey-0: #fdfeff;
+  }
+
+  .sunBg{
+    background-image: url(../../assets/img/sun.svg);
+  }
+
+
+
